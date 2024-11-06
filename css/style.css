@@ -1,0 +1,80 @@
+* {
+    margin: 0; /* Eliminar márgenes */
+    padding: 0; /* Eliminar márgenes y rellenos */
+    box-sizing: border-box; /* Modelo de caja */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+}
+
+body {
+    min-height: 100vh; /* Altura mínima de la ventana */
+    background: #211024; /* Fondo oscuro */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.calculadora {
+    background: #201d3f; /* Fondo morado oscuro */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.pantalla {
+    width: 100%; /* Ancho de la pantalla */
+    height: 100px; /* Altura de la pantalla */
+    background: #f1eded; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    font-size: 30px; /* Tamaño de la fuente */
+    text-align: right; /* Alineación a la derecha */
+    margin-bottom: 10px; /* Espacio inferior */
+    color: #333; /* Color de la fuente */
+}
+
+.botones {
+    display: grid; /* Grid para los botones */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 10px; /* Espacio entre botones */
+}
+
+
+button {
+    min-height: 60px; /* Altura mínima */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    color: #6c9a9b; /* Color de la fuente */
+    background: #413d80;  /* Fondo morado oscuro */
+}
+
+button:hover {
+    background: #f0f0f0; /* Fondo gris claro al pasar el ratón */
+}
+
+.operador {
+    background: #ffb347; /* Fondo naranja */
+}
+
+.operador:hover {
+    background: #dc9946; /* Fondo naranja claro al pasar el ratón */
+}
+
+.clean {
+    background: #d9534f; /* Fondo rojo */
+}
+
+.clean:hover {
+    background: #e74c3c; /* Fondo rojo claro al pasar el ratón */
+}
+
+.igual {
+    background: #d9534f; /* Fondo rojo */
+    grid-column: span 2; /* Ocupar 2 columnas */
+}
+
+.igual:hover {
+    background: #e74c3c; /* Fondo rojo claro al pasar el ratón */
+}
