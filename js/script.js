@@ -62,10 +62,19 @@ function limpiar() {
     operadorActual = null;
 }
 
+function borrar(){
+    pantalla.value = pantalla.value.slice(0, -1);
+}
+
 // Función para calcular el resultado
 function calcular() {
-    if (operadorActual === null || reiniciarPantalla) 
+
+    //Para que funcione la raiz sin elegir 2 numeros
+    if (operadorActual === null)
         return;
+
+    //if (operadorActual === null || reiniciarPantalla) 
+    //    return;
 
         const numero1 = parseFloat(numeroAnterior);
         const numero2 = parseFloat(pantalla.value);
@@ -92,7 +101,7 @@ function calcular() {
                 resultado = numero1 / numero2;
                 break;
             case '√':  
-                resultado = Math.sqrt(numero1);
+                resultado = Math.sqrt(numero2);
                 break;
         }
     
@@ -131,6 +140,7 @@ function calcular() {
 
         //Borrar
         else if(key === 'Backspace') {
-            display.value = display.value.slice(0, -1);
+            borrar();
         }
+
     });
